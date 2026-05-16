@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/components/cell.tsx","./src/components/datagrid.tsx","./src/components/filepicker.tsx","./src/components/querypanel.tsx","./src/components/schemapanel.tsx","./src/components/statspanel.tsx"],"version":"5.9.3"}

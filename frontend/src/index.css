@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply text-paper-700 dark:text-paper-100 antialiased;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* subtle warm paper grain for light mode */
+    background-image:
+      radial-gradient(rgba(140, 110, 60, 0.04) 1px, transparent 1px),
+      radial-gradient(rgba(140, 110, 60, 0.03) 1px, transparent 1px);
+    background-position: 0 0, 7px 7px;
+    background-size: 14px 14px, 14px 14px;
+  }
+  html.dark body {
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+      radial-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+    background-position: 0 0, 7px 7px;
+    background-size: 14px 14px, 14px 14px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium
+           bg-paper-50 hover:bg-paper-200 text-paper-700
+           dark:bg-plum-700 dark:hover:bg-plum-600 dark:text-paper-100
+           border border-paper-300 dark:border-plum-600
+           transition-colors;
+  }
+  .btn-primary {
+    @apply btn text-white bg-clay-500 hover:bg-clay-600
+           dark:bg-clay-500 dark:hover:bg-clay-400
+           border-clay-600 dark:border-clay-600 shadow-warm;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium
+           bg-paper-200 dark:bg-plum-700 text-paper-600 dark:text-paper-200
+           border border-paper-300 dark:border-plum-600;
+  }
+  .surface {
+    @apply bg-white dark:bg-plum-700 border border-paper-200 dark:border-plum-600;
+  }
+}
+
+/* Custom scrollbar — warm tones */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-paper-300 dark:bg-plum-600 rounded-full;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-paper-400 dark:bg-plum-500;
+  background-clip: content-box;
+}
+
+/* Selection — warm clay highlight */
+::selection {
+  background-color: rgba(220, 91, 72, 0.25);
+  color: inherit;
+}
