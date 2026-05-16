@@ -4,8 +4,6 @@ A friendly desktop viewer for `.parquet` files.
 
 Most parquet viewers do a few things badly — long strings don't wrap, you can't see what's actually *inside* a column, and exporting needs another tool. ParquetPeek fixes those.
 
-![ParquetPeek screenshot placeholder](docs/screenshot.png)
-
 ## Features
 
 - **Smart text wrapping & expandable cells** — long strings/JSON wrap into paragraphs by default; click `expand` to see the full value.
